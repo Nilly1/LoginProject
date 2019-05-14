@@ -26,6 +26,7 @@ File system is used as user repository.
 Prerequisites:
 - Install XAMPP 1.8.0 from https://sourceforge.net/projects/xampp/files/ \
   It installs PHP 5.4
+- Make sure the project tree resides under htdocs/LoginProject directory
 
 ## Setup
 This project provides an out of the box user repository which contains 10 users.\
