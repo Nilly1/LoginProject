@@ -28,11 +28,14 @@ Prerequisites:
   It installs PHP 5.4
 
 ## Setup
-Creating a sample user repository with 10 users is very easy. \
-Browse to https://web_server_host/LoginProject/php/addusers.php 
+This project provides an out of the box user repository which contains 10 users.\
+In order to change user's credentials follow these steps:
+1. Delete all json files under the db directory.
+2. Update the file LoginProject/php/addusers.php with a new repository.
+3. Browse to https://web_server_host/LoginProject/php/addusers.php which will populate the repository.
 
 Note:\
-For production environment you should remove this php file from your project.
+For production environment you should remove addusers.php file from your project.
 
 The addusers.php script creates the following credentials (username,password):
 - gary,KAEYZwZxi 
@@ -72,6 +75,7 @@ In case user's 'update_time' property is not updated more than 3 seconds the use
 - Unauthroized session are permitted to access only the login page. 
 - Passwords are never kept as plain text. They are hashed with a random different salt per user. 
 - The salt and the hashed value never leave the backend, i.e. the client is not exposed to this sensitive data. 
-- Wrong user credentials display a vague error message intentially to harden the dictionary attack. 
+- Wrong user credentials display a vague error message intentially to harden the dictionary attack.
+- Create .htaccess file under the DB directory in order to prevent access to the DB directory.
 
  
